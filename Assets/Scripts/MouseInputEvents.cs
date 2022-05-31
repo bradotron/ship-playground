@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Mouse2D : MonoBehaviour
+public class MouseInputEvents : MonoBehaviour
 {
   public UnityEvent RightClickDown;
   public UnityEvent RightClickHeld;
