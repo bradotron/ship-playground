@@ -5,5 +5,5 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Ship/Ship Dictionary")]
 public class ShipDictionarySO : ScriptableObject
 {
-  public Ship Destroyer;
+  public ShipSO Destroyer;
 }

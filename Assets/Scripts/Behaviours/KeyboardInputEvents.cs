@@ -3,16 +3,16 @@ using UnityEngine;
 
 public class KeyboardInputEvents : MonoBehaviour
 {
-  public InputBinding IncreaseThrottle;
-  public InputBinding DecreaseThrottle;
-  public InputBinding RotateDesiredHeadingLeft;
-  public InputBinding RotateDesiredHeadingRight;
-  private List<InputBinding> InputBindings;
+  public KeyCodeEvents IncreaseThrottle;
+  public KeyCodeEvents DecreaseThrottle;
+  public KeyCodeEvents RotateDesiredHeadingLeft;
+  public KeyCodeEvents RotateDesiredHeadingRight;
+  private List<KeyCodeEvents> InputBindings;
 
 
   private void Awake()
   {
-    InputBindings = new List<InputBinding>();
+    InputBindings = new List<KeyCodeEvents>();
     InputBindings.Add(IncreaseThrottle);
     InputBindings.Add(DecreaseThrottle);
     InputBindings.Add(RotateDesiredHeadingLeft);
@@ -21,7 +21,7 @@ public class KeyboardInputEvents : MonoBehaviour
 
   private void Update()
   {
-    foreach (InputBinding inputBinding in InputBindings)
+    foreach (KeyCodeEvents inputBinding in InputBindings)
     {
       if (Input.GetKeyDown(inputBinding.KeyCodeReference.KeyCode))
       {

@@ -5,5 +5,5 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Input Binding List")]
 public class InputBindingList
 {
-  public List<InputBinding> InputBindings;
+  public List<KeyCodeEvents> InputBindings;
 }

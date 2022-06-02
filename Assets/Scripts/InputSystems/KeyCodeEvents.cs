@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [System.Serializable]
-public class InputBinding
+public class KeyCodeEvents
 {
-  public KeyCodeReference KeyCodeReference;
+  public KeyCodeReferenceSO KeyCodeReference;
   public UnityEvent KeyDown;
   public UnityEvent KeyHeld;
   public UnityEvent KeyUp;

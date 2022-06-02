@@ -6,7 +6,9 @@ using UnityEngine;
 public class PlayerShipInitializer : MonoBehaviour
 {
   [SerializeField] private ShipDictionarySO ShipDictionarySO;
-  private Ship Ship;
+  [SerializeField] private PlayerShipGuidanceComputers playerShipGuidanceComputers;
+  
+  private ShipSO Ship;
   private GameObject ActivePlayerShip;
   private KeyboardInputEvents KeyboardInputs;
   private MouseInputEvents MouseInputs;
@@ -21,11 +23,10 @@ public class PlayerShipInitializer : MonoBehaviour
     InitializeReferences();
     InitializePlayerShip();
     InitializeShipMovement();
-    ConnectInputsToShipMovement();
   }
 
 
-  public void SetActiveShip(Ship ship)
+  public void SetActiveShip(ShipSO ship)
   {
     Ship = ship;
   }
@@ -59,15 +60,13 @@ public class PlayerShipInitializer : MonoBehaviour
   {
     ActiveShipMovement = ActivePlayerShip.GetComponent<ShipMovement>();
     ActiveShipMovement.SetShipData(Ship.ShipData);
-  }
 
-  private void ConnectInputsToShipMovement()
-  {
-    KeyboardInputs.IncreaseThrottle.KeyHeld.AddListener(ActiveShipMovement.IncreaseThrottle);
-    KeyboardInputs.DecreaseThrottle.KeyHeld.AddListener(ActiveShipMovement.DecreaseThrottle);
-    KeyboardInputs.RotateDesiredHeadingLeft.KeyHeld.AddListener(ActiveShipMovement.RotateDesiredHeadingLeft);
-    KeyboardInputs.RotateDesiredHeadingRight.KeyHeld.AddListener(ActiveShipMovement.RotateDesiredHeadingRight);
+    // set guidance computer dictionary into ship movement here
+
+    // gotta setup the inputs for manual guidance
+    playerShipGuidanceComputers.Manual.SetInputEvents(KeyboardInputs.IncreaseThrottle, KeyboardInputs.DecreaseThrottle, KeyboardInputs.RotateDesiredHeadingLeft, KeyboardInputs.RotateDesiredHeadingRight);
     
-    MouseInputs.RightClickUp.AddListener(ActiveShipMovement.SetDestinationToMouseWorldPosition);
+    
+    ActiveShipMovement.SetActiveGuidanceComputer(playerShipGuidanceComputers.Manual);
   }
 }

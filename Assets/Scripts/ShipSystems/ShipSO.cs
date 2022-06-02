@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Ship/Ship")]
-public class Ship : ScriptableObject
+public class ShipSO : ScriptableObject
 {
-  [SerializeField] public ShipData ShipData;
+  [SerializeField] public ShipDataSO ShipData;
   [SerializeField] private PrefabReferenceSO PrefabReferenceSO;
 
   public GameObject Prefab
