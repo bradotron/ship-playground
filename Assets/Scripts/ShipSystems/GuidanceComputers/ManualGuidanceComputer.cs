@@ -2,45 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Guidance Computers/Manual")]
-public class ManualGuidanceComputer : ScriptableObject, IGuidanceComputer
+public class ManualGuidanceComputer : IGuidanceComputer
 {
   // change to float references
   private readonly float HeadingChangePerSecond = 60f;
   private readonly float ThrottleChangePerSecond = 0.5f;
   private GuidanceProperties CurrentGuidanceProperties;
 
-  private KeyCodeEvents IncreaseThrottleEvents;
-  private KeyCodeEvents DecreaseThrottleEvents;
-  private KeyCodeEvents RotateCommandedHeadingLeftEvents;
-  private KeyCodeEvents RotateCommandedHeadingRightEvents;
-
   public void Activate()
   {
-    IncreaseThrottleEvents.KeyHeld.AddListener(this.IncreaseThrottle);
-    DecreaseThrottleEvents.KeyHeld.AddListener(this.DecreaseThrottle);
-    RotateCommandedHeadingLeftEvents.KeyHeld.AddListener(this.RotateCommandedHeadingLeft);
-    RotateCommandedHeadingRightEvents.KeyHeld.AddListener(this.RotateCommandedHeadingRight);
+    // if (keyboardInputEvents == null)
+    // {
+    //   Debug.Log("events is null");
+    // }
+
+    // keyboardInputEvents.IncreaseThrottle.KeyHeld.AddListener(this.IncreaseThrottle);
+    // keyboardInputEvents.DecreaseThrottle.KeyHeld.AddListener(this.DecreaseThrottle);
+    // keyboardInputEvents.RotateDesiredHeadingLeft.KeyHeld.AddListener(this.RotateCommandedHeadingLeft);
+    // keyboardInputEvents.RotateDesiredHeadingRight.KeyHeld.AddListener(this.RotateCommandedHeadingRight);
   }
 
   public void Deactivate()
   {
-    IncreaseThrottleEvents.KeyHeld.RemoveListener(this.IncreaseThrottle);
-    DecreaseThrottleEvents.KeyHeld.RemoveListener(this.DecreaseThrottle);
-    RotateCommandedHeadingLeftEvents.KeyHeld.RemoveListener(this.RotateCommandedHeadingLeft);
-    RotateCommandedHeadingRightEvents.KeyHeld.RemoveListener(this.RotateCommandedHeadingRight);
-  }
-
-  public void SetInputEvents(KeyCodeEvents increaseThrottle, KeyCodeEvents decreaseThrottle, KeyCodeEvents rotateLeft, KeyCodeEvents rotateRight) {
-    IncreaseThrottleEvents = increaseThrottle;
-    DecreaseThrottleEvents = decreaseThrottle;
-    RotateCommandedHeadingLeftEvents = rotateLeft;
-    RotateCommandedHeadingRightEvents = rotateRight;
+    // keyboardInputEvents.IncreaseThrottle.KeyHeld.RemoveListener(this.IncreaseThrottle);
+    // keyboardInputEvents.DecreaseThrottle.KeyHeld.RemoveListener(this.DecreaseThrottle);
+    // keyboardInputEvents.RotateDesiredHeadingLeft.KeyHeld.RemoveListener(this.RotateCommandedHeadingLeft);
+    // keyboardInputEvents.RotateDesiredHeadingRight.KeyHeld.RemoveListener(this.RotateCommandedHeadingRight);
   }
 
   public GuidanceProperties Compute()
   {
-    // Debug.Log("Computing manual guidance: " + CurrentGuidanceProperties.Heading + " | " + CurrentGuidanceProperties.Throttle);
     return CurrentGuidanceProperties;
   }
 

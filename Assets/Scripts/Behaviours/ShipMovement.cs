@@ -123,7 +123,6 @@ public class ShipMovement : MonoBehaviour
 
   private void DeccelerateToCommandedSpeed()
   {
-    Debug.Log("Deccelerate");
     Vector2 Decceleration = -shipRb2D.velocity.normalized * ShipData.ThrustAcceleration;
     Vector2 NewVelocity = shipRb2D.velocity + Decceleration * Time.fixedDeltaTime;
     if (NewVelocity.magnitude < CommandedSpeed)
@@ -135,7 +134,6 @@ public class ShipMovement : MonoBehaviour
 
   private void AccelerateToCommandedSpeed()
   {
-    Debug.Log("Accelerate");
     Vector2 Acceleration = transform.right * ShipData.ThrustAcceleration;
     Vector2 NewVelocityRotatedToThrustDirection = shipRb2D.velocity + Acceleration * Time.fixedDeltaTime;
 

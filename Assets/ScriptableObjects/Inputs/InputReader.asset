@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7265b8bf072b57149ad3088be723a0d9, type: 3}
+  m_Name: InputReader
+  m_EditorClassIdentifier: 
+  LeftButtonEvents:
+    Button: {fileID: 11400000, guid: 0d6973a0dc50eae41810989e9e8fe45f, type: 2}
+    ButtonDown:
+      m_PersistentCalls:
+        m_Calls: []
+    ButtonHeld:
+      m_PersistentCalls:
+        m_Calls: []
+    ButtonUp:
+      m_PersistentCalls:
+        m_Calls: []
+  RightButtonEvents:
+    Button: {fileID: 11400000, guid: ff394fd000b4f154087a8e896afc9437, type: 2}
+    ButtonDown:
+      m_PersistentCalls:
+        m_Calls: []
+    ButtonHeld:
+      m_PersistentCalls:
+        m_Calls: []
+    ButtonUp:
+      m_PersistentCalls:
+        m_Calls: []
+  MiddleButtonEvents:
+    Button: {fileID: 11400000, guid: dc55373354f3847499648c0a14f4f4de, type: 2}
+    ButtonDown:
+      m_PersistentCalls:
+        m_Calls: []
+    ButtonHeld:
+      m_PersistentCalls:
+        m_Calls: []
+    ButtonUp:
+      m_PersistentCalls:
+        m_Calls: []
+  MouseWheelForward:
+    m_PersistentCalls:
+      m_Calls: []
+  MouseWheelBackward:
+    m_PersistentCalls:
+      m_Calls: []
+  IncreaseThrottle:
+    KeyCodeReference: {fileID: 11400000, guid: c803ca3f4713e924e8ba9d71c7af18a0, type: 2}
+    KeyDown:
+      m_PersistentCalls:
+        m_Calls: []
+    KeyHeld:
+      m_PersistentCalls:
+        m_Calls: []
+    KeyUp:
+      m_PersistentCalls:
+        m_Calls: []
+  DecreaseThrottle:
+    KeyCodeReference: {fileID: 11400000, guid: fde63db04130d0a4b9e5949ce9aea9a9, type: 2}
+    KeyDown:
+      m_PersistentCalls:
+        m_Calls: []
+    KeyHeld:
+      m_PersistentCalls:
+        m_Calls: []
+    KeyUp:
+      m_PersistentCalls:
+        m_Calls: []
+  RotateDesiredHeadingLeft:
+    KeyCodeReference: {fileID: 11400000, guid: 916005eb31b1a714999b15c1486d4516, type: 2}
+    KeyDown:
+      m_PersistentCalls:
+        m_Calls: []
+    KeyHeld:
+      m_PersistentCalls:
+        m_Calls: []
+    KeyUp:
+      m_PersistentCalls:
+        m_Calls: []
+  RotateDesiredHeadingRight:
+    KeyCodeReference: {fileID: 11400000, guid: 12d24543bbb32f74ba7b2e3a2f1b645e, type: 2}
+    KeyDown:
+      m_PersistentCalls:
+        m_Calls: []
+    KeyHeld:
+      m_PersistentCalls:
+        m_Calls: []
+    KeyUp:
+      m_PersistentCalls:
+        m_Calls: []
