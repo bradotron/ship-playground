@@ -10,9 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1679728299908253462}
   - component: {fileID: 1679728299908253461}
-  - component: {fileID: 4331874039242727816}
   m_Layer: 0
-  m_Name: VCamWithControls
+  m_Name: VCam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,21 +71,6 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 1679728300520180831}
---- !u!114 &4331874039242727816
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1679728299908253460}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05e678fe705b76c4b93e46df5c3c9ffd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FollowTarget: {fileID: 0}
-  SelectTarget: 116
-  ResetTarget: 32
 --- !u!1 &1679728300520180830
 GameObject:
   m_ObjectHideFlags: 0
